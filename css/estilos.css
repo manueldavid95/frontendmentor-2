@@ -1,0 +1,134 @@
+/* 
+    Orden de los estilos css 
+    1- Posicionamiento (positioning)
+    2- Modelo de caja (Box-Model)
+    3- Tipografia (Typography)
+    4- Visual (Visual)
+    5- Misc (Otros)
+*/
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+/*Custom Properties*/
+:root{
+    /*colores primarios*/
+    --cyan: hsl(179, 62%, 43%);
+    --bright-yellow: hsl(71, 73%, 54%);
+    /*colores naturales*/
+    --light-gray: hsl(204, 43%, 93%);
+    --grayish-blue: hsl(218, 22%, 67%);
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    font-family: 'Karla', sans-serif;
+    font-size: 1.6rem;
+    background: var(--light-gray);
+}
+
+/*estilos para la seccion card*/
+.card{
+    width: 90%;
+    min-width: 312px;
+    max-width: 635px;
+    margin: 1.6rem 0;
+    background: #fff;
+    overflow: hidden;
+    border-radius: 1rem;
+    box-shadow: 0px 10px 15px -3px var(--grayish-blue);
+}
+
+/* relleno para los elementos */
+.padding{
+    padding: 2rem;
+}
+
+/* card_header */
+.card_header_h1{
+    margin-bottom: 2rem;
+    font-weight: 700;
+    color: var(--cyan);
+}
+.card_header_h2{
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    color: var(--bright-yellow);
+}
+.card_header_p{
+    color: var(--grayish-blue);
+    line-height: 1.6;
+}
+
+
+/* card_flex */
+.card_flex{
+    color: var(--light-gray);
+}
+.card_flex_item_h2{
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 1.6rem;
+}
+.card_flex_item_h3{
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+.card_flex_item_h3 span{
+    font-size: 4rem;
+}
+.card_flex_item_p{
+    margin-bottom: 2rem;
+}
+.card_flex_item_btn{
+    display: inline-block;
+    width: 100%;
+    padding: 1.6rem 0;
+    outline: none;
+    border: none;
+    border-radius: 0.5rem;
+    background: none;background: var(--bright-yellow);
+    cursor: pointer;
+    color: var(--light-gray);
+}
+.card_flex_item_ul{
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    color: var(--light-gray);
+}
+
+/* fondos para las tarjetas */
+.card_flex_item-clara{
+    background: hsla(179, 62%, 43%, 1);
+}
+.card_flex_item-oscura{
+    background: hsla(179, 62%, 43%, 0.6);
+}
+
+@media(min-width: 700px){
+    .card{
+        margin: 0;
+    }
+    .padding{
+        padding: 4rem;
+    }
+
+    /* card_flex */
+    .card_flex{
+        display: flex;
+    }
+    .card_flex_item{
+        width: 50%;
+    }
+    .card_flex_item_h2{
+        font-size: 1.6rem;
+    }
+    .card_flex_item_p{
+        margin-bottom: 2.5em;
+    }
+}
